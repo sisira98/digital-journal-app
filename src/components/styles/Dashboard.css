@@ -1,0 +1,15 @@
+.placeholder-blue::placeholder {
+    color:#5A4282; 
+  }
+.placeholder-dark_blue::placeholder {
+    color:#301DAD; 
+  }
+  .angle-custom {
+    transform: rotate(-0deg);
+  }
+  .angle-custom_90 {
+    transform: rotate(90deg);
+  }
+  .custom-font-settings {
+    font-variation-settings: 'wdth' 90;
+  }
