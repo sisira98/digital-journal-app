@@ -1,5 +1,3 @@
-// actions/selectedEntryActions.js
-
 export const getEntry = (entryId) => {
     return async (dispatch) => {
       try {

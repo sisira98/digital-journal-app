@@ -2,7 +2,6 @@ import React from "react";
 import NavBarIcon from '../../assets/NavBarIcon.svg'
 import Eud from '../../assets/Eudaimonia.svg'
 import profileIcon from '../../assets/ProfilePicIcon.svg'
-import { NavBar } from '../Layout/NavBar'
 
 export const Header = ({ toggleSidebar }) => {
   return (
