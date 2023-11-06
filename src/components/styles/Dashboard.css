@@ -1,15 +1,44 @@
 .placeholder-blue::placeholder {
-    color:#5A4282; 
-  }
+  color: #5A4282;
+}
+
 .placeholder-dark_blue::placeholder {
-    color:#301DAD; 
-  }
-  .angle-custom {
-    transform: rotate(-0deg);
-  }
-  .angle-custom_90 {
-    transform: rotate(90deg);
-  }
-  .custom-font-settings {
-    font-variation-settings: 'wdth' 90;
-  }
+  color: #301DAD;
+}
+
+.angle-custom {
+  transform: rotate(-0deg);
+}
+
+.angle-custom_90 {
+  transform: rotate(90deg);
+}
+
+.custom-font-settings {
+  font-variation-settings: 'wdth' 90;
+}
+
+.z {
+  z-index: 25;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+}
+
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #AFA7DF;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #fff;
+}

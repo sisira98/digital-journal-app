@@ -5,7 +5,7 @@ export default {
     extend: {
       colors: {
         FONT_BLUE: '#301DAD',
-        SEARCH_BLUE:'#5A4282',
+        SEARCH_BLUE: '#5A4282',
         RED: '#FF0000',
       },
       fontSize: {
@@ -14,7 +14,7 @@ export default {
         MEDIUM: '20px',
         NORMAL: '16px',
         SMALL: '14px',
-        TINY:'12px',
+        TINY: '12px',
       },
       fontWeight: {
         EXTRABOLD: '800',
@@ -35,8 +35,8 @@ export default {
         'search-custom': ' 0px 1px 4px 1px #0000000F',
         'search-custom-one': '1px 1px 4px 0px #0000001F',
         'item-custom': '3px 4px 4px 2px #0000000F',
-        'entry_custom':'5px 4px 10px 4px #0000000F',
-        'main_entry_custom':'4px 4px 10px 6px #0000000D',
+        'entry_custom': '5px 4px 10px 4px #0000000F',
+        'main_entry_custom': '4px 4px 10px 6px #0000000D',
 
       },
     },
