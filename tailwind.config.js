@@ -9,7 +9,8 @@ export default {
         RED: '#FF0000',
       },
       fontSize: {
-        LARGER: '30px',
+        LARGEST:'50px',
+        LARGER: '32px',
         LARGE: '25px',
         MEDIUM: '20px',
         NORMAL: '16px',

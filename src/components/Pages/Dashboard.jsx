@@ -83,7 +83,7 @@ export const Dashboard = () => {
               <img src={isColorChanged ? DashboardIconBlack : DashboardIcon} alt="Dashboard" className="relative" onClick={handleClick} />
             </Link>
             <Link to={'/your-entry'}>
-              <img src={NewPostIcon} alt="NewPost" className="relative" onClick={setSelectedEntryId(null)} />
+              <img src={NewPostIcon} alt="NewPost" className="relative" onClick={() => setSelectedEntryId(null)} />
             </Link>
             <Link to={'/'}>
               <img src={DashboardOneIconBlack} alt="Dashboard" className={`relative`} />
@@ -98,7 +98,7 @@ export const Dashboard = () => {
             <ul className="overflow-hidden w-[472px] h-[709px] overflow-y-auto custom-scrollbar">
               {entries.map((entry, index) => (
                 <li
-                  className="relative w-[439px] h-[208px] top-[-1px] left-[5px] rounded-[15px] shadow-item-custom p-[28px] mb-6 cursor-pointer"
+                  className="relative w-[439px] h-[222px] top-[-1px] left-[5px] rounded-[15px] shadow-item-custom p-[28px] mb-6 cursor-pointer"
                   key={index}
                   onClick={() => handleEntryClick(entry)}
                 >
@@ -132,7 +132,7 @@ export const Dashboard = () => {
                 onClick={() => deleteEntries(selectedEntry ? selectedEntry.id : '')}
               />
             </div>
-            <h3 className="p-[60px] pt-0 pb-4 font-sacramento text-LARGE_ONE  font-SMALL leading-[72.97px] text-FONT_BLUE">{selectedEntry ? selectedEntry.title : ''}</h3>
+            <h3 className="p-[60px] pt-0 pb-4 font-sacramento text-LARGEST  font-SMALL leading-[72.97px] text-FONT_BLUE">{selectedEntry ? selectedEntry.title : ''}</h3>
             <p className="p-[60px] pt-0 font-OPENSANS text-NORMAL font-MEDIUM leading-[25px] tracking-normal text-left custom-font-settings">{selectedEntry ? selectedEntry.content : ''}</p>
           </div>
         </div>
