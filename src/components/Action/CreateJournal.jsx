@@ -15,6 +15,7 @@ export const shareEntry = (title, content) => {
             if (response.ok) {
                 const data = await response.json();
                 dispatch({ type: 'CREATE_ENTRY_DATA', payload: data });
+                window.location.reload();
                 console.log('Entry created successfully');
             } else {
                 console.error('Error creating entry:', response.statusText);

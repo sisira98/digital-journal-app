@@ -103,7 +103,7 @@ export const Dashboard = () => {
                   onClick={() => handleEntryClick(entry)}
                 >
                   <img src={Clip} alt="line" className="absolute left-[-11px]" />
-                  {selectedEntry === entry && <img src={Rectangle} alt="line" className="absolute right-[0px] top-[0px]" />}
+                  {selectedEntry === entry && <img src={Rectangle} alt="line" className="absolute right-[0px] top-[0px] h-[223px]" />}
                   {(entry === JournalData[0] && !selectedEntry) && <img src={Rectangle} alt="line" className="absolute right-[0px] top-[0px]" />}
                   <h3 className="mb-2 font-sacramento text-LARGE  font-MEDIUM leading-[36px] tracking-normal text-left">{entry.title}</h3>
                   <p className="mb-2 font-OPENSANS text-TINY font-SMALL leading-[16.34px] text-SEARCH_BLUE">{formatDate(entry.createdAt)}</p>

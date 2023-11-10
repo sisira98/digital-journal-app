@@ -14,6 +14,7 @@ export const editEntry = (entryId, shareTitle, shareContent) => {
 
             if (response.ok) {
                 dispatch({ type: 'EDIT_ENTRY_SUCCESS', payload: entryId });
+                window.location.reload();
             } else {
                 console.error('Error editing entry:', response.statusText);
             }
