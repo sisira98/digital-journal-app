@@ -43,7 +43,6 @@ export const Dashboard = () => {
   }, [entries, selectedEntry]);
   const deleteEntries = async (entryId) => {
     dispatch(deleteEntry(entryId));
-    window.location.reload();
   };
   const handleClick = () => {
     setColorChanged(!isColorChanged);
@@ -63,7 +62,7 @@ export const Dashboard = () => {
   }
 
   return (
-    <div className={`${isSidebarOpen ? 'bg-[#8D8C8E]' : ''} h-[56.5rem]`}>
+    <div className={`${isSidebarOpen ? 'bg-[#8D8C8E]' : ''} `}>
       <NavBar isOpen={isSidebarOpen} toggleSidebar={toggleSidebar} />
       <div className={`${isSidebarOpen ? 'bg-[#8D8C8E]' : ''} `}>
         <Header toggleSidebar={toggleSidebar} />
@@ -90,31 +89,31 @@ export const Dashboard = () => {
             </Link>
           </div>
         </div>
-        <div className="relative">
-          <img src={Line} alt="line" className="absolute top-[6px] left-[9.18px] -z-10" />
-        </div>
+        {/* <div className="relative">
+          {/* <img src={Line} alt="line" className="absolute top-[6px] left-[9.18px] -z-10" /> */}
+        {/* </div>  */}
         <div className={` ${isSidebarOpen ? ' opacity-40' : ''} relative top-[52px] left-[114px] w-[439px]`}>
           <div className="relative flex flex-col">
-            <ul className="overflow-hidden w-[472px] h-[709px] overflow-y-auto custom-scrollbar">
+            <ul className="overflow-hidden w-[472px] h-[520px] overflow-y-auto custom-scrollbar">
               {entries.map((entry, index) => (
                 <li
-                  className="relative w-[439px] h-[222px] top-[-1px] left-[5px] rounded-[15px] shadow-item-custom p-[28px] mb-6 cursor-pointer"
+                  className="relative w-[439px] h-[222px] top-[-1px] left-[5px] rounded-[15px] shadow-item-custom p-[35px] mb-6 cursor-pointer"
                   key={index}
                   onClick={() => handleEntryClick(entry)}
                 >
-                  <img src={Clip} alt="line" className="absolute left-[-11px]" />
+                  <img src={Clip} alt="line" className="absolute left-[-4px]" />
                   {selectedEntry === entry && <img src={Rectangle} alt="line" className="absolute right-[0px] top-[0px] h-[223px]" />}
                   {(entry === JournalData[0] && !selectedEntry) && <img src={Rectangle} alt="line" className="absolute right-[0px] top-[0px]" />}
                   <h3 className="mb-2 font-sacramento text-LARGE  font-MEDIUM leading-[36px] tracking-normal text-left">{entry.title}</h3>
                   <p className="mb-2 font-OPENSANS text-TINY font-SMALL leading-[16.34px] text-SEARCH_BLUE">{formatDate(entry.createdAt)}</p>
-                  <p className="font-OPENSANS text-SMALL font-SMALL leading-[19.07px]">{entry.content.substr(0, 300)}{entry.content.length > 300 ? "..." : ""}</p>
+                  <p className="font-OPENSANS text-SMALL font-SMALL leading-[19.07px]">{entry.content.substr(0, 200)}{entry.content.length > 300 ? "..." : ""}</p>
                 </li>
               ))}
             </ul>
           </div>
-          <div className={` ${isSidebarOpen ? '  opacity-40' : ''} absolute w-[761px] h-[723px] top-[-38px] left-[486px] rounded-[15px] shadow-main_entry_custom`}>
+          <div className={` ${isSidebarOpen ? '  opacity-40' : ''} absolute w-[761px] h-[566px] top-[-38px] left-[486px] rounded-[15px] shadow-main_entry_custom`}>
             <div className="relative w-[741px] top-[43.5px] left-[15px] border angle-custom bg-[#0000005E]"></div>
-            <div className="relative w-[700px] top-[367px] left-[-308px] border angle-custom_90 bg-[#0000005E]"></div>
+            <div className="relative w-[550px] top-[285px] left-[-237px] border angle-custom_90 bg-[#0000005E]"></div>
             <div className="relative flex justify-end pl-0 p-[31px] pb-0 gap-[21px] left-[3px] bottom-[25px]">
               <Link to={'/your-entry'}>
 

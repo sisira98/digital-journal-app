@@ -7,6 +7,7 @@ export const deleteEntry = (entryId) => {
 
             if (response.ok) {
                 dispatch({ type: 'DELETE_ENTRY_SUCCESS', payload: entryId });
+                window.location.reload();
             } else {
                 console.error('Error deleting entry:', response.statusText);
             }
